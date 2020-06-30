@@ -1,0 +1,147 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	font-size: 16px;
+	font-family: "Josefin Sans", sans-serif;
+	background-image: linear-gradient(
+		135deg,
+		hsl(0, 0%, 100%),
+		hsl(0, 100%, 98%)
+	);
+}
+header {
+	height: auto;
+	padding: 15px;
+}
+header img {
+	width: 80px;
+}
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-direction: column-reverse;
+}
+.content {
+	width: 100%;
+	height: auto;
+	padding: 2.5rem 2rem 1.5rem 2rem;
+	text-align: center;
+}
+.content h1 {
+	font-size: 2rem;
+
+	text-transform: uppercase;
+	color: hsl(0, 36%, 70%);
+	line-height: 2rem;
+	letter-spacing: 0.3rem;
+}
+.content h1 span {
+	color: hsl(0, 6%, 24%);
+	font-weight: 500;
+}
+.content p {
+	color: hsl(0, 36%, 70%);
+	width: 80%;
+	margin: 1.5rem auto;
+	line-height: 1.5rem;
+}
+.form {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 50px;
+	margin: 0 auto;
+}
+.form input {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	outline: none;
+	border-radius: 50px;
+	left: 0;
+	top: 0;
+	border: 1px solid hsl(0, 36%, 70%);
+	padding-left: 25px;
+	font-family: inherit;
+}
+.form button {
+	cursor: pointer;
+	height: 100%;
+	width: 70px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-radius: 50px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+	box-shadow: 0px 0px 19px 3px hsla(0, 36%, 70%, 0.582);
+}
+.form button:hover {
+	background-image: linear-gradient(135deg, hsl(0, 71%, 90%), hsl(0, 69%, 75%));
+	box-shadow: 0px 0px 13px 4px hsla(0, 36%, 70%, 0.582);
+}
+.hero-img {
+	width: 100%;
+	height: 300px;
+	background-image: url("./images/hero-mobile.jpg");
+	background-size: cover;
+	background-position: center center;
+}
+.error-icon{
+    display: none;
+    position: absolute;
+    top: 24%;
+    left:300px
+}
+.error-text{
+    display: none;
+}
+@media only screen and (min-width: 768px) {
+	header {
+		position: absolute;
+		padding-left: 10%;
+	}
+	header img {
+		width: 120px;
+		width: 150px;
+		left: 36.202px;
+		position: relative;
+		top: 25px;
+	}
+	.container {
+		flex-direction: row;
+	}
+	.content {
+		padding: 28vh;
+		width: 100%;
+		height: 100vh;
+		text-align: left;
+		background-image: url(./images/bg-pattern-desktop.svg);
+		background-size: cover;
+	}
+	.content p {
+		margin-left: 0;
+	}
+	.hero-img {
+		background-image: url(./images/hero-desktop.jpg);
+		width: 80%;
+		height: 100vh;
+	}
+	.content h1 {
+		font-size: 3rem;
+		line-height: 3rem;
+	}
+	.form {
+		max-width: 400px;
+		margin: 0;
+	}
+}
